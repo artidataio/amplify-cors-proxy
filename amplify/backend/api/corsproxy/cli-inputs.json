@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/": {
+      "name": "/",
+      "lambdaFunction": "corsproxyFunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

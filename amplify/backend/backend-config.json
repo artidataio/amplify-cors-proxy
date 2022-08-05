@@ -1,0 +1,39 @@
+{
+  "function": {
+    "corsproxyFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "amplifycorsproxyaxiosLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
+    },
+    "amplifycorsproxyaxiosLayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
+    }
+  },
+  "api": {
+    "corsproxy": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "corsproxyFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  }
+}
