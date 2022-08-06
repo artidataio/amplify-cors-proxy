@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
 // The function that will be executed for the http get call
 app.get('/', async function(req, res) {
   try{
-    const response = await axios.get('https://api.publicapis.org/entries')
+    const response = await axios.get(req.query.uri)
     res.json(response.data)
   } catch (err){
     res.statusCode(500)

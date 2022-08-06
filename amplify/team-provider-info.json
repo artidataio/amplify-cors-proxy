@@ -15,7 +15,7 @@
       "function": {
         "corsproxyFunction": {
           "deploymentBucketName": "amplify-amplifycorsproxy-dev-55017-deployment",
-          "s3Key": "amplify-builds/corsproxyFunction-62594371736d71423174-build.zip"
+          "s3Key": "amplify-builds/corsproxyFunction-7a48544c4b55524a4150-build.zip"
         },
         "amplifycorsproxyaxiosLayer": {
           "deploymentBucketName": "amplify-amplifycorsproxy-dev-55017-deployment",
