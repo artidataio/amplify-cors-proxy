@@ -1,4 +1,4 @@
-# Easily Deploy a CORS Proxy Server with AWS Amplify
+# Easily Deploy a CORS Proxy with AWS Amplify
 
 ## Motivation
 
@@ -20,7 +20,7 @@ The backend developers only work with the postman.
 They forget to set the response header `Access-Control-Allow-Origin : *` because it doesn't matter to them as their tests still pass without it.
 You tell them to fix it, but it takes time and you have deadlines.
 
-## About CORS Proxy Server
+## About CORS Proxy
 
 If you have experienced such agitations, CORS Proxy can be your savior.
 Instead of sending a request directly to the data API server, the browser makes the request to a proxy server with CORS enabled.
@@ -28,7 +28,7 @@ During that request, the proxy server sent the actual request to the data API se
 This method will enable the browser to give JavaScript the data that it needs.
 **No more CORS error!**
 
-You actually don't have to spin up your own CORS Proxy server as https://corsproxy.io/ is a thing. 
+You actually don't have to spin up your own CORS Proxy as https://corsproxy.io/ is a thing. 
 However, you are a developer and you don't want your service to be critically reliant on others, right?!
 Then I might have a solution for your problem. 
 It involves building your own CORS Proxy API with just a few commands.
@@ -72,9 +72,9 @@ amplify init
 amplify push
 ```
 
-Congratulations, now you have your own CORS Proxy Server. 
+Congratulations, now you have your own CORS Proxy. 
 Start fetching from your websites to any data API that you want, regardless whether the data API enabled CORS or not. 
 
 Note that provisioning these serverless resources shouldn't incur any charges.
-Only when the the Lambda gets called, i.e your CORS Proxy Server is accessed, they will start charging you.
+Only when the the Lambda gets called, i.e your CORS Proxy is accessed, they will start charging you.
 Read more about the pricing [here](https://aws.amazon.com/lambda/pricing/).
