@@ -73,8 +73,30 @@ amplify push
 ```
 
 Congratulations, now you have your own CORS Proxy. 
+At the end of the push, it should be written in your terminal where the resource endpoint is located.
 Start fetching from your websites to any data API that you want, regardless whether the data API enabled CORS or not. 
 
 Note that provisioning these serverless resources shouldn't incur any charges.
 Only when the the Lambda gets called, i.e your CORS Proxy is accessed, they will start charging you.
 Read more about the pricing [here](https://aws.amazon.com/lambda/pricing/).
+
+## Rollback and Issues
+
+If you find yourself not satisfied with the provisioned resources, you can always delete it like any other AWS Amplify stack:
+
+```sh
+amplify delete
+```
+
+If you find any issues with the code, or you just want to give a feedback with the project, you can always start a new issue on this repo.
+
+## Example
+
+Supposed that you are here to check what the end product look like, or you want to have access to another free CORS Proxy. Here's one for you:
+
+https://hngmsnp0y0.execute-api.ap-southeast-1.amazonaws.com/prod
+
+
+## LICENSE
+
+`amplify-cors-proxy` is licensed under the [ISC license](./LICENSE)
