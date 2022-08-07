@@ -33,7 +33,7 @@ app.get('/', async function(req, res) {
       const response = await axios.get(req.query.uri)
       res.json(response.data)
     } else {
-      res.json({message: "The CORS Proxy is successfully provisioned. Add 'uri' query parameter to fetch from resources where CORS is not enabled yet. For example: https://6at8htta6f.execute-api.ap-southeast-1.amazonaws.com/dev?uri=https://pse.kominfo.go.id/static/json-static/ASING_TERDAFTAR/0.json"})
+      res.json({message: "The CORS Proxy is successfully provisioned. Add 'uri' query parameter to fetch from resources where CORS is not enabled yet. For example: https://<your-successfully-provisioned-endpoint>?uri=https://pse.kominfo.go.id/static/json-static/ASING_TERDAFTAR/0.json"})
     }
   } catch (err){
     res.statusCode(500)
